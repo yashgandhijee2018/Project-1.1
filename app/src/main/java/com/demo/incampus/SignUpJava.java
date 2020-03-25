@@ -1,4 +1,4 @@
-package com.demo.incampus;
+ package com.demo.incampus;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -111,7 +111,7 @@ public class SignUpJava extends AppCompatActivity implements GoogleApiClient.OnC
         startActivity(i);
     }
     public void go_to_OTP_activity_function(View view) {
-        Intent i=new Intent(this,OTPJava.class/*AutthenticateTempActivity.class*/);
+        Intent i=new Intent(this,PhoneNumberActivity.class/*AutthenticateTempActivity.class*/);
         startActivity(i);
     }
 
@@ -125,7 +125,7 @@ public class SignUpJava extends AppCompatActivity implements GoogleApiClient.OnC
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
             // Signed in successfully, show authenticated UI.
-            Intent i=new Intent(this,OTPJava.class/*AutthenticateTempActivity.class*/);
+            Intent i=new Intent(this,PhoneNumberActivity.class/*AutthenticateTempActivity.class*/);
             startActivity(i);
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
