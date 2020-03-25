@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,14 +9,16 @@
     tools:context=".OTPJava">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/qr_inv"
         android:orientation="horizontal"
         android:padding="30dp"
-        android:background="@drawable/qr_inv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -26,146 +28,63 @@
             android:id="@+id/VerifCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Verification Code"
-            android:layout_marginTop="10dp"
             android:textColor="@android:color/black"
             android:textSize="30sp" />
+
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/numberlayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4">
-
-        <EditText
-            android:id="@+id/editTextone"
-            android:layout_width="50sp"
-            android:layout_height="80sp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/roundrect2"
-            android:backgroundTint="@android:color/white"
-            android:fontFamily="@font/montserrat_medium"
-            android:inputType="number"
-            android:maxLength="1"
-            android:nextFocusRight="@+id/editText_two"
-            android:paddingStart="20sp"
-            android:paddingEnd="5sp"
-            android:textSize="26sp">
-
-            <requestFocus />
-        </EditText>
-
-        <EditText
-            android:id="@+id/editTexttwo"
-            android:layout_width="50sp"
-            android:layout_height="80sp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/roundrect2"
-            android:backgroundTint="@android:color/white"
-            android:fontFamily="@font/montserrat_medium"
-            android:inputType="number"
-            android:maxLength="1"
-            android:paddingStart="20sp"
-            android:paddingEnd="5sp"
-            android:textSize="26sp" />
-
-        <EditText
-            android:id="@+id/editTextthree"
-            android:layout_width="50sp"
-            android:layout_height="80sp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/roundrect2"
-            android:backgroundTint="@android:color/white"
-            android:fontFamily="@font/montserrat_medium"
-            android:inputType="number"
-            android:maxLength="1"
-            android:paddingStart="20sp"
-            android:paddingEnd="5sp"
-            android:textSize="26sp" />
-
-        <EditText
-            android:id="@+id/editTextfour"
-            android:layout_width="50sp"
-            android:layout_height="80sp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/roundrect2"
-            android:backgroundTint="@android:color/white"
-            android:fontFamily="@font/montserrat_medium"
-            android:inputType="number"
-            android:maxLength="1"
-            android:paddingStart="20sp"
-            android:paddingEnd="5sp"
-            android:textSize="26sp" />
-
-        <EditText
-            android:id="@+id/editTextfive"
-            android:layout_width="50sp"
-            android:layout_height="80sp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/roundrect2"
-            android:backgroundTint="@android:color/white"
-            android:fontFamily="@font/montserrat_medium"
-            android:inputType="number"
-            android:maxLength="1"
-            android:paddingStart="20sp"
-            android:paddingEnd="5sp"
-            android:textSize="26sp" />
-
-        <EditText
-            android:id="@+id/editTextsix"
-            android:layout_width="50sp"
-            android:layout_height="80sp"
-            android:background="@drawable/roundrect2"
-            android:backgroundTint="@android:color/white"
-            android:fontFamily="@font/montserrat_medium"
-            android:inputType="number"
-            android:maxLength="1"
-            android:paddingStart="20sp"
-            android:paddingEnd="5sp"
-            android:textSize="26sp" />
-    </LinearLayout>
 
     <TextView
         android:id="@+id/resendcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
         android:clickable="true"
         android:fontFamily="@font/montserrat_medium"
         android:text="Resend Code"
         android:textColor="@color/colorPrimary"
         android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberlayout"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toTopOf="@+id/next" />
 
     <Button
         android:id="@+id/next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/qr"
-        android:padding="20sp"
         android:backgroundTint="@color/colorPrimary"
         android:fontFamily="@font/montserrat_semi_bold"
+        android:padding="20sp"
         android:text="Next"
         android:textColor="@android:color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:onClick="go_to_InfoJava_activity_function"/>
+
+        android:onClick="verify_OTP_function"
+        />
+
+    <EditText
+        android:id="@+id/OTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="149dp"
+        android:background="@drawable/edit_text_background1"
+        android:ems="10"
+        android:hint="OTP"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
