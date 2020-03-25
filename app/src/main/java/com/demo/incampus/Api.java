@@ -1,4 +1,4 @@
-package com.demo.incampus;
+ package com.demo.incampus;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -36,8 +36,15 @@ public interface Api {
 
     @FormUrlEncoded
     @POST("otp")
-    @Headers("Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieWFzaCIsImlhdCI6MTU4NDk2OTQ3MH0.y5elEi_0HoBx8H9pYn7p5qSn-669lixXK4RYYSvsBps")
+    @Headers("Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieWFzaCIsImlhdCI6MTU4NDk2OTQ3MH0.y5elEi_0HoBx8H9pYn7p5qSn-669lixXK4RYYSvsBps")
     Call<ResponseBody> otpReceive(
             @Field("phone_number") String phoneNumber
     );
+
+    @FormUrlEncoded
+    @POST("verifyotp")
+    Call<ResponseBody> verifyotp(
+            @Field("otp") String OTP,
+            @Field("session_id") String sessionID);
 }
+
